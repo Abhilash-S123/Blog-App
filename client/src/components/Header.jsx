@@ -24,7 +24,7 @@ const Header = () => {
                     border-gray-300 bg-white rounded overflow-hidden mt-8'>
                         <input className='w-full pl-4 outline-none focus:outline-none placeholder-gray-400
                            ' type="text" placeholder='search for blogs' required />
-                        <button  className='text-white bg-primary px-8 py-2 m-1.5 rounded hover:scale-105 
+                        <button  className='text-white bg-primary px-8 py-2 m-1.5 rounded hover:scale-105
                         transition-all cursor-pointer' type='submit'>search</button>
                     </form>
             </div>
