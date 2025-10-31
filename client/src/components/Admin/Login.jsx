@@ -26,7 +26,7 @@ const Login = () => {
                   <label htmlFor="password">Password</label>
                   <input onChange={(e) => setPassword(e.target.value)} value={password} className='border border-gray-300 p-2 rounded placeholder:text-gray-500' type="password" id="password" name="password" placeholder='Enter your password' required />
                 </div>
-                <button className='w-full bg-blue-600 text-white py-2 rounded
+                <button className='w-full bg-blue-600 text-white py-2 rounded cursor-pointer
                     hover:bg-blue-800 transition-colors' type="submit">Login</button>
             </form>
           </div>
