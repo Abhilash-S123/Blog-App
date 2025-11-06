@@ -11,4 +11,4 @@ import mongoose from "mongoose";
 
   const Blog = mongoose.model('blog', blogSchema);
 
-  export default Blog;
+  export default Blog;       
