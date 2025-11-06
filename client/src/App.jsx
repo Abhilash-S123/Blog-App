@@ -24,7 +24,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/blog/:id" element={<Blog />} />
 
-        <Route path='/admin' element={ token ? <Layout /> : <Login/>}>
+        <Route path='/admin' element={ token ? <Layout /> : <Login />}>
           <Route index element={<Dashboard />} />
           <Route path='AddBlog' element={<AddBlog />} />
           <Route path='Comments' element={<Comments />} />
