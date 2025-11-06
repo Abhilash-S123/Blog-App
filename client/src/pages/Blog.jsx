@@ -35,7 +35,7 @@ const Blog = () => {
   return data ? (
     <div className='relative'>
         <Navbar />
-                                          {/* <img className='w-full absolute -top-50 -z-1 opacity-20' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUDIRkpm44ZMD_YlV3WbjQroEqFrHhYXxiug&s' alt="" /> */}
+            {/* <img className='w-full absolute -top-50 -z-1 opacity-20' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUDIRkpm44ZMD_YlV3WbjQroEqFrHhYXxiug&s' alt="" /> */}
 
         <div className='text-center mt-20 text-gray-600  '>
             <p className='text-primary py-4 font-medium '>Published on {Moment(data.createdAt).format('MMMM Do YYYY')}</p>

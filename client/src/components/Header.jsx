@@ -1,7 +1,24 @@
 import React from 'react'
 import { assets } from '../assets/assets'
+import { useAppContext } from '../context/AppContext'
+import { useRef } from 'react'
 
 const Header = () => {
+
+  const {setInput, input} = useAppContext()
+  const inputRef = useRef()
+
+  const onSubmitHandler = async (e) => {
+    e.preventDefault()
+    setInput(inputRef.current.value)
+  }
+
+  const onClear = () => {
+    setInput('')
+    inputRef.current.value = ''
+  } 
+   
+
     return (
         <div className='mx-8 sm:mx-16 xl:mx-24 relative'>
 
@@ -20,13 +37,17 @@ const Header = () => {
                     the power of AI to help you create engaging <br /> content effortlessly. Whether you're a seasoned blogger
                      or just starting out, QuickBlog has got you covered.</p>
 
-                    <form className='flex justify-between max-w-lg max-sm:scale-75 mx-auto border
+                    <form onSubmit={onSubmitHandler } className='flex justify-between max-w-lg max-sm:scale-75 mx-auto border
                     border-gray-300 bg-white rounded overflow-hidden mt-8'>
-                        <input className='w-full pl-4 outline-none focus:outline-none placeholder-gray-400
+                        <input ref = {inputRef} className='w-full pl-4 outline-none focus:outline-none placeholder-gray-400
                            ' type="text" placeholder='search for blogs' required />
                         <button  className='text-white bg-primary px-8 py-2 m-1.5 rounded hover:scale-105
                         transition-all cursor-pointer' type='submit'>search</button>
                     </form>
+            </div>
+            <div className='text-center'>
+                {input && <button onClick={onClear} className='border font-light text-xs py-1 px-3 rounded-sm
+                shadow-custom-sm cursor-pointer'>Clear Search</button>}
             </div>
 
             <img className='absolute -top-50 -z-1 opacity-50' src={assets.gradientBackground} alt="" />
