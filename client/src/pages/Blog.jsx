@@ -15,8 +15,8 @@ const Blog = () => {
   const {axios} = useAppContext()
 
   const [ data, setData ] = useState(null);
-  const [ comments, setComments] = useState([]);
-  const [ name, setName] = useState('');
+  const [ comments, setComments ] = useState([]);
+  const [ name, setName ] = useState('');
   const [ content, setContent ] = useState('');
 
 

@@ -9,7 +9,6 @@ export const addBlog = async (req, res) => {
           //JSON.parse converts string to object because image is present
         const {title, subTitle, description, category, isPublished } = JSON.parse(req.body.blog);
         const imageFile = req.file;
-        console.log(req.file);
         
 
         // Check if all fields are present
