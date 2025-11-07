@@ -50,7 +50,7 @@ const Blog = () => {
        if(data.success){
         toast.success(data.message)                
         setName('')
-        setComments('')
+        setContent('')
        } else {
           toast.error(data.message)
        }
@@ -93,7 +93,7 @@ const Blog = () => {
                               </div>
                                <p>{item.content}</p>
                                <div className='text-gray-500'>{Moment(item.createdAt).fromNow()}</div>
-                         </div>
+                         </div>        
                       ))}
                    </div>
                

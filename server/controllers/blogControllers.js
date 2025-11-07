@@ -113,6 +113,8 @@ export const addBlog = async (req, res) => {
    try {
       const { blogId } = req.body;
       const comments = await Comment.find({blog: blogId , isApproved: true}).sort({CreatedAt: -1})  // -1 sort by newest first
+      //console.log("comments = ",comments);
+      
        res.json({success: true, comments})
    } catch (error) {
        res.json({success:false, message: error.message})
