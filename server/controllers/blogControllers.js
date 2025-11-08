@@ -77,7 +77,8 @@ export const addBlog = async (req, res) => {
     try {
        const { id } = req.body
         await Blog.findByIdAndDelete(id)       
-           res.json({success:true, message: "Blog deleted successfully"})
+        await Comment.deleteMany({blog: id})
+           res.json({success:true, message: "Blog and related comments deleted successfully"})
     } catch (error) {
               res.json({success:false, message: error.message})
     }
