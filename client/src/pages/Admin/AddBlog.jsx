@@ -5,6 +5,7 @@ import { useAppContext } from '../../context/AppContext'
 import { toFormData } from 'axios'
 import toast from 'react-hot-toast'
 import {parse} from 'marked'
+import Blog from '../../../../server/models/Blog'
 
 
 const AddBlog = () => {
@@ -19,7 +20,7 @@ const AddBlog = () => {
   const [image, setImage] = useState(false)
   const [title, setTitle] = useState('')
   const [subTitle, setSubTitle] = useState('')
-  const [category, setCategory] = useState('Startup')
+  const [category, setCategory] = useState('')
   const [isPublished, setIsPublished] = useState(false)
 
 
@@ -55,13 +56,13 @@ const AddBlog = () => {
       formData.append('blog', JSON.stringify(blog))
       formData.append('image', image)
 
-        const {data} =  await axios.post('/api/blog/add', formData)
+      const {data} =  await axios.post('/api/blog/add', formData)
        if (data.success) {
          toast.success(data.message)
          setImage(false)
          setTitle('')
          quillRef.current.root.innerHTML = ''
-         setCategory('startup')
+         setCategory('')
        } else {
          toast.error(data.message)
        }
@@ -89,7 +90,7 @@ const AddBlog = () => {
           <label htmlFor="image">
             <img className='mt-2 h-16 rounded cursor-pointer bg-blue-800'
              src={!image ? assets.upload_area : URL.createObjectURL(image)} alt="" />
-            <input className='' onChange={(e) => setImage(e.target.files[0])} type="file" id="image" hidden required />
+            <input className='' onChange={(e) => setImage(e.target.files[0])} type="file" id="image" hidden  />
           </label>
 
           <p className='mt-9'>Blog title</p>
@@ -119,8 +120,8 @@ const AddBlog = () => {
           </div>
            <p className='mt-4'>Blog category</p>
           <select className=' mt-2 border p-2 border-gray-300 outline-none rounded' onChange={(e) => setCategory(e.target.value)}
-           name="category" >
-            <option value="">Select category</option>
+           name="category" value={category} >
+            <option value=''>Select category</option>
             {blogCategories.map((item, index) => {
               return <option key={index} value={item}>{item}</option>
             })}
