@@ -117,17 +117,6 @@ const Blog = () => {
                 </form>
               </div>
 
-              {/* Share buttons */}
-
-              <div className='mx-auto mb-8 flex flex-col gap-4 max-w-3xl'>
-                <p className='font-semibold mx-auto'> Share this article on social media</p>
-                 <div className='flex m-auto'>
-                  <img src={assets.facebook_icon} alt="Facebook" />
-                  <img src={assets.twitter_icon} alt="Twitter" />
-                  <img src={assets.googleplus_icon} alt="Google Plus" />
-                 </div>
-              </div>
-
               <Footer />    
     </div>
   ) : <Loader />;

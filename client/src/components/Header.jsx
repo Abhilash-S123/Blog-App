@@ -33,9 +33,10 @@ const Header = () => {
                 <h1 className='text-3xl sm:text-6xl font-semibold sm:leading-16 
             text-gray-700'>Your own <span className='text-primary'>blogging</span> <br /> flatform</h1>
 
-                <p className='mt-6 text-gray-600 text-sm sm:text-base m-auto'>QuickBlog is a blogging platform that leverages 
-                    the power of AI to help you create engaging <br /> content effortlessly. Whether you're a seasoned blogger
-                     or just starting out, QuickBlog has got you covered.</p>
+                <p className='mt-6 text-gray-600 text-sm sm:text-base m-auto text-center'>Welcome to our AI-powered blog platform!
+              All articles here are carefully created and published by our admin using intelligent content generation.<br/> 
+              Explore insightful posts across various categories, stay updated, and join the conversation by leaving your comments.
+           </p>
 
                     <form onSubmit={onSubmitHandler } className='flex justify-between max-w-lg max-sm:scale-75 mx-auto border
                     border-gray-300 bg-white rounded overflow-hidden mt-8'>
