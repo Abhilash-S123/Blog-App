@@ -12,13 +12,7 @@ A responsive web application where admins can create blogs using AI and users ca
 ![Home Page](https://github.com/Abhilash-S123/Blog-App/blob/master/Screenshot%20from%202025-12-07%2016-49-38.png?raw=true)
 
 ### Admin Dashboard
-![Admin Dashboard](screenshots/admin-dashboard.png)
-
-### Blog Editor with AI
-![Blog Editor](screenshots/blog-editor.png)
-
-### User Comments
-![Comments Section](screenshots/comments.png)
+![Admin Dashboard](https://github.com/Abhilash-S123/Blog-App/blob/master/Screenshot%20from%202025-12-12%2012-32-53.png?raw=true)
 
 ## ✨ Features
 
@@ -72,17 +66,19 @@ npm install
 Create `.env` file:
 ```env
 PORT=5000
-MONGODB_URI=your_mongodb_uri
+MONGODB_URL=your_mongodb_uri
 JWT_SECRET=your_jwt_secret
 GEMINI_API_KEY=your_gemini_api_key
 IMAGEKIT_PUBLIC_KEY=your_imagekit_public_key
 IMAGEKIT_PRIVATE_KEY=your_imagekit_private_key
 IMAGEKIT_URL_ENDPOINT=your_imagekit_endpoint
+ADMIN_PASSWORD=set_any_admin_password
+ADMIN_EMAIL=set_any_admin_email
 ```
 
 Start server:
 ```bash
-npm start
+npm run server
 ```
 
 3. **Frontend Setup**
@@ -93,10 +89,10 @@ npm install
 
 Create `.env` file:
 ```env
-VITE_API_URL=http://localhost:5000/api
+VITE_BACKEND_URL=http://localhost:5000
 ```
 
-Start development server:
+Start frontend server:
 ```bash
 npm run dev
 ```
@@ -107,7 +103,7 @@ MIT License
 
 ## 👤 Author
 
-Your Name - [GitHub Profile](https://github.com/yourusername)
+Your Name - [GitHub Profile](https://github.com/Abhilash-S123)
 
 ---
 
