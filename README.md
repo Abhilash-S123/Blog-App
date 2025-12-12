@@ -9,8 +9,7 @@ A responsive web application where admins can create blogs using AI and users ca
 ## 📸 Screenshots
 
 ### Home Page
-![Home Page](<img width="1600" height="900" alt="Screenshot from 2025-12-07 16-49-38" src="https://github.com/user-attachments/assets/09cf42ab-bc99-4200-a0ce-4733d70ca8db" />
-)
+![Home Page](https://github.com/Abhilash-S123/Blog-App/blob/master/Screenshot%20from%202025-12-07%2016-49-38.png?raw=true)
 
 ### Admin Dashboard
 ![Admin Dashboard](screenshots/admin-dashboard.png)
