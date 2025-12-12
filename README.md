@@ -53,7 +53,7 @@ A responsive web application where admins can create blogs using AI and users ca
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/quickblog.git
+git clone https://github.com/Abhilash-S123/quickblog.git
 cd quickblog
 ```
 
@@ -103,7 +103,7 @@ MIT License
 
 ## 👤 Author
 
-Your Name - [GitHub Profile](https://github.com/Abhilash-S123)
+Abhilash.S - [GitHub Profile](https://github.com/Abhilash-S123)
 
 ---
 
