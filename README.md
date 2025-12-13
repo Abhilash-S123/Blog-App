@@ -54,7 +54,7 @@ A responsive web application where admins can create blogs using AI and users ca
 1. **Clone the repository**
 ```bash
 git clone https://github.com/Abhilash-S123/Blog-App.git
-cd quickblog
+cd Quickblog
 ```
 
 2. **Backend Setup**
